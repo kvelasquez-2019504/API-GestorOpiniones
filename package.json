@@ -18,5 +18,8 @@
   "homepage": "https://github.com/kvelasquez-2019504/API-GestorOpiniones#readme",
   "devDependencies": {
     "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "mongoose": "^8.2.0"
   }
 }
