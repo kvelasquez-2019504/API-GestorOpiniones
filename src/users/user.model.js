@@ -1,23 +1,23 @@
 import mongoose,{Schema} from 'mongoose';
 
 const UserSchema = mongoose.Schema({
-    nombreUser:{
+    username:{
         type:String,
-        required:[true,"El nombre de usuario es obligatorio"]
+        required:[true,"Username is required"]
     },
-    correoUser:{
+    userEmail:{
         type:String,
-        required:[true, "El correo es obligatorio"]
+        required:[true, "Email is mandatory"]
     },
     password:{
         type:String,
-        required:[true, "La clave es obligatoria"]
+        required:[true, "The password is mandatory"]
     },
-    publicaciones:{
+    publications:{
         type:Array,
         default:[]
     },
-    comentarios:{
+    comments:{
         type:Array,
         default:[]
     }
