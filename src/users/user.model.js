@@ -1,7 +1,7 @@
 import mongoose,{Schema} from 'mongoose';
 
 const UserSchema = mongoose.Schema({
-    nomberUser:{
+    nombreUser:{
         type:String,
         required:[true,"El nombre de usuario es obligatorio"]
     },
@@ -15,7 +15,7 @@ const UserSchema = mongoose.Schema({
     },
     comentarios:{
         type:Array,
-        default:['']
+        default:[]
     }
 });
 
