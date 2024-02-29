@@ -13,6 +13,10 @@ const UserSchema = mongoose.Schema({
         type:String,
         required:[true, "La clave es obligatoria"]
     },
+    publicaciones:{
+        type:Array,
+        default:[]
+    },
     comentarios:{
         type:Array,
         default:[]
