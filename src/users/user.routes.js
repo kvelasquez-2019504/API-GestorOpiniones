@@ -1,7 +1,7 @@
 import {Router} from 'express'; 
 import {check} from 'express-validator';
 import {validarCampos} from '../middlewares/validar-campos.js'
-import {usuariosPost} from '../users/user.controller.js';
+import {usuariosPost} from './user.controller.js';
 const router = Router();
 
 router.post('/',[

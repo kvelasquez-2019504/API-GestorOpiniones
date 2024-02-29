@@ -10,7 +10,7 @@ class Server {
     constructor(){
         this.app = express();
         this.port = process.env.PORT;
-        this.userPath = '/v1/users'; 
+        this.userPath = '/opinionsManager/v1/users'; 
         this.middlewares();
         this.conectarDB();
         this.routes();
@@ -23,8 +23,8 @@ class Server {
     middlewares(){
         this.app.use(cors());
         this.app.use(express.json());
-        this.app.use(morgan('dev'));
         this.app.use(helmet());
+        this.app.use(morgan('dev'));
     }
     
     routes(){
