@@ -10,15 +10,6 @@ export const existsUsername = async( username="")=>{
     }
 }
 
-export const verifyPassword=async (passwordOld="")=>{
-    const {_id} =async (req)=>{ return {uid}=req.user;};
-    const user = await User.findOne(_id);
-    
-    if(bcryptjs.compareSync(user.password,passwordOld)){
-        throw new Error("The old password entered is not equal");
-    }
-}
-
 export const existsUserEmail = async( userEmail="")=>{
     const existsUserEmail = await User.findOne({userEmail});
     if(existsUserEmail){

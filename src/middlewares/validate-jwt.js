@@ -10,7 +10,7 @@ export const validateJWT = async(req,res,next)=>{
     }
     try {
         //verificacion de token
-        const {uid}= jwt.verify(token,process.env.SECRETORPRIVATEKEY);
+        const {uid} = jwt.verify(token,process.env.SECRETORPRIVATEKEY);
         //leer el usuerio con el id de token
         const user= await User.findById(uid);
         //verificar que existe el usuario

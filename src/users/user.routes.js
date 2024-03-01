@@ -1,17 +1,19 @@
 import {Router} from 'express'; 
 import {check} from 'express-validator';
-import {existsUsername,verifyPassword,
+import {existsUsername,
     existsUserEmail} from '../helpers/db-validator.js';
 import {validateFields} from '../middlewares/validate-field.js';
 import {validateJWT} from '../middlewares/validate-jwt.js';
-import {userPut,userPost} from './user.controller.js';
+import {verifyPassword,
+    userPut,
+    userPost} from './user.controller.js';
 const router = Router();
 
 router.put('/',[validateJWT,
     check("username","The username is required").not().isEmpty(),
     check("username").custom(existsUsername),
-    check("passwordOld").custom(verifyPassword),
-    check("password","The password is mandatory for security and with minimum 8 characters").isLength({min:8}),
+    verifyPassword,
+    check("passwordNew","The password is mandatory for security and with minimum 8 characters").isLength({min:8}),
     validateFields
 ],userPut);
 
