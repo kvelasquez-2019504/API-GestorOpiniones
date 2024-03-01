@@ -31,7 +31,7 @@ export const login = async(req,res)=>{
             msg:"YOU ARE LOGGED IN THE APP",
             userLog,
             token
-        })
+        });
 
     } catch (error) {
         console.log(error);

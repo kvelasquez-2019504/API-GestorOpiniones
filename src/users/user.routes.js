@@ -1,7 +1,7 @@
 import {Router} from 'express'; 
 import {check} from 'express-validator';
 import {existsUsername,existsUserEmail} from '../helpers/db-validator.js';
-import {validateField} from '../middlewares/validate-field.js'
+import {validateFields} from '../middlewares/validate-field.js'
 import {userPost} from './user.controller.js';
 const router = Router();
 
@@ -11,7 +11,7 @@ router.post('/',[
     check("userEmail","A valid email is required").isEmail(),
     check('userEmail').custom(existsUserEmail),
     check("password","The password is mandatory for security").isLength({min:8}),
-    validateField
+    validateFields
 ],userPost);
 
 export default router; 
