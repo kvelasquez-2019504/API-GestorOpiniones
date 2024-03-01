@@ -4,6 +4,7 @@ import {existsUsername,
     existsUserEmail} from '../helpers/db-validator.js';
 import {validateFields} from '../middlewares/validate-field.js';
 import {validateJWT} from '../middlewares/validate-jwt.js';
+import { validateUsername } from '../middlewares/validate-username.js';
 import {verifyPassword,
     userPut,
     userPost} from './user.controller.js';
@@ -11,10 +12,10 @@ const router = Router();
 
 router.put('/',[validateJWT,
     check("username","The username is required").not().isEmpty(),
-    check("username").custom(existsUsername),
-    verifyPassword,
+    validateUsername,
     check("passwordNew","The password is mandatory for security and with minimum 8 characters").isLength({min:8}),
-    validateFields
+    validateFields,
+    verifyPassword
 ],userPut);
 
 router.post('/',[

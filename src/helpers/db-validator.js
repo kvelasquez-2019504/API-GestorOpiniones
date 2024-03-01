@@ -5,7 +5,7 @@ export const existsUsername = async( username="")=>{
     const [total]=await Promise.all([
         User.find({username:{$all:username}})
     ]);
-    if(existsUsername && total.length >1){
+    if(total.length==1){
         throw new Error(`The username ${username} already exists in the DataBase`);
     }
 }
