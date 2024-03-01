@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "65e1e328c6c233ea786bae98"
+  },
+  "username": "kvelasquez",
+  "userEmail": "kvelasquez@gmail.com",
+  "password": "$2a$10$mHl7tU.WdrZPhhyPyFTEnu6axxguvScv9ZXl5FB8g3pEEclC07DRu",
+  "publications": [],
+  "comments": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e1e339c6c233ea786bae9c"
+  },
+  "username": "brodriguez",
+  "userEmail": "brodriguez@gmail.com",
+  "password": "$2a$10$YgWarCxClZTzEFDFa8oNH.R1Ycwo7Ig4aPCliNHqVnZuYPm5lQGAC",
+  "publications": [],
+  "comments": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e1e347c6c233ea786baea0"
+  },
+  "username": "scardenas",
+  "userEmail": "scardenas@gmail.com",
+  "password": "$2a$10$S/Zeefujo2qztLT55QMJO.IBJa9T9itJG.gSjmZpCcNyBQfrqB1/a",
+  "publications": [],
+  "comments": [],
+  "__v": 0
+}]

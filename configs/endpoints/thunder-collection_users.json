@@ -1,0 +1,71 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "users",
+    "dateExported": "2024-03-01T16:46:49.583Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9ebbec2e-bf51-4f8c-95f9-d4eb818a9bdb",
+            "colId": "3c30e224-a1b3-406c-9db6-6be152399d79",
+            "containerId": "",
+            "name": "userPost",
+            "url": "http://localhost:3000/opinionsManager/v1/users/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-29T03:35:00.672Z",
+            "modified": "2024-03-01T16:46:25.435Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"dsanchez\",\n  \"userEmail\":\"dsanchez@gmail.com\",\n  \"password\":\"12345678\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "768a8e94-6e24-476a-bae4-77e39241f24b",
+            "colId": "3c30e224-a1b3-406c-9db6-6be152399d79",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:3000/opinionsManager/v1/login/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-01T01:21:09.695Z",
+            "modified": "2024-03-01T14:18:34.941Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user\":\"brodriguez\",\n  \"password\":\"12345678\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e5041f94-44de-429c-bb8b-270f972d83d1",
+            "colId": "3c30e224-a1b3-406c-9db6-6be152399d79",
+            "containerId": "",
+            "name": "userPut",
+            "url": "http://localhost:3000/opinionsManager/v1/users/",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-01T05:12:11.043Z",
+            "modified": "2024-03-01T16:42:10.965Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZTMzOWM2YzIzM2VhNzg2YmFlOWMiLCJpYXQiOjE3MDkzMDI3MTQsImV4cCI6MTcwOTMxMzUxNH0.xqRuTUwiBOOH3tbSeONalyPyGcyH43TBKYy2QRroNUg"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"brodriguez\",\n  \"passwordOld\":\"12345678\",\n  \"passwordNew\":\"12345678\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
