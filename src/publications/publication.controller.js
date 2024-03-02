@@ -17,6 +17,16 @@ export const publicationGet= async(req,res)=>{
     });
 }
 
+export const publicationDelete=async(req=request,res=response)=>{
+    const {idPublication}=req.params;
+    const publication = await Publication.findById(idPublication);
+    res.status(200).json({
+        msg:"Deleted publication",
+        publication
+    });
+
+}
+
 export const verifyIdPublication = async (req, res, next) => {
     const { idPublication } = req.params;
     const { id } = req.user;

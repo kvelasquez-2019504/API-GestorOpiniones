@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { check } from "express-validator";
 import { publicationGet,
+    publicationDelete,
     publicationPost,
     verifyIdPublication,
     publicationPut } from "./publication.controller.js";
@@ -12,7 +13,7 @@ const router= Router();
 
 router.get('/',[validateJWT],publicationGet);
 
-router.delete('/:idPublication',[validateJWT],)
+router.delete('/:idPublication',[validateJWT,verifyIdPublication],publicationDelete);
 
 router.put('/:idPublication',[validateJWT,
     verifyIdPublication,
