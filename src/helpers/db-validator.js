@@ -16,3 +16,9 @@ export const existsUserEmail = async( userEmail="")=>{
         throw new Error(`The user email ${userEmail} already exists in the DataBase`);
     }
 }
+
+export const verifyLengthCategory= async(category=[])=>{
+    if(category.length==0){
+        throw new Error("Is necessary one category");
+    }
+}
