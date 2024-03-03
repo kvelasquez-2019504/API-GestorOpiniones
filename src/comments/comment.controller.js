@@ -15,6 +15,29 @@ export const commentPost = async (req=request, res=response)=>{
     });
 }
 
+export const verifyComment = async (req,res,next)=>{
+    const { idComment } = req.params;
+    const { id } = req.user;
+    const userLog = await User.findById(id);
+    if (!userLog.comments.includes(idComment)) {
+        return res.status(400).json({
+            msg: "The comment not is your"
+        });
+    }
+    next();
+}
+
+export const commentPut = async(req=request,res=response)=>{
+    const { idComment } = req.params;
+    const { _id, idUser,idPublication, ...comment } = req.body;
+    await Comment.findByIdAndUpdate(idComment,{...comment});
+    const newComment = await Comment.findById(idComment);
+    res.status(200).json({
+        msg:"The comment is now updated",
+        newComment
+    });
+}
+
 export const commentsGet = async (req=request, res=response)=>{
     const {id} =req.user;
     const userLog =await User.findById(id);
