@@ -21,4 +21,4 @@ commentSchema.method.JSON = function(){
     return comment;
 }
 
-export default Schema.model('Comment', commentSchema);
+export default mongoose.model('Comment', commentSchema);
