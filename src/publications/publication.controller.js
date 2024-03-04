@@ -19,6 +19,14 @@ export const publicationGet = async (req, res) => {
     });
 }
 
+export const publicationGetById = async (req, res) => {
+    const { idPublication } = req.params;
+    const publicationSearch = await Publication.findById(idPublication);
+    res.status(200).json({
+        publicationSearch
+    });
+}
+
 export const publicationDelete = async (req = request, res = response) => {
     const { idPublication } = req.params;
     const publication = await Publication.findById(idPublication);

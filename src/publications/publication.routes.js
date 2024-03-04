@@ -13,6 +13,8 @@ const router= Router();
 
 router.get('/',[validateJWT],publicationGet);
 
+router.get('/:idPublication',[validateJWT,verifyIdPublication],publicationGet);
+
 router.delete('/:idPublication',[validateJWT,verifyIdPublication],publicationDelete);
 
 router.put('/:idPublication',[validateJWT,
