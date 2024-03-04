@@ -1,0 +1,114 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "publications",
+    "dateExported": "2024-03-04T05:35:42.197Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "92f4611e-a967-4bd2-83b3-e2642fbdf071",
+            "colId": "6257ad02-8cd3-47fe-9761-fbc73dbaddd6",
+            "containerId": "",
+            "name": "publicationPost",
+            "url": "http://localhost:3000/opinionsManager/v1/publications/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-01T23:34:19.382Z",
+            "modified": "2024-03-04T05:13:25.019Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZTM0N2M2YzIzM2VhNzg2YmFlYTAiLCJpYXQiOjE3MDk1Mjg5NjksImV4cCI6MTcwOTUzOTc2OX0.nqY-RdAOWKS0XT7whlklQRQsCRsTryjZobcmwL9AnnY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"I like...\",\n  \"mainText\":\"Is your imagination\",\n  \"category\":[\"Poetic\",\"Random\",\"Meme\"]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e2ae48e1-e6fc-4264-9334-3e9a7f1f62e4",
+            "colId": "6257ad02-8cd3-47fe-9761-fbc73dbaddd6",
+            "containerId": "",
+            "name": "publicationPut",
+            "url": "http://localhost:3000/opinionsManager/v1/publications/65e2b0736d2164965a33aeeb",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-03-02T02:45:14.003Z",
+            "modified": "2024-03-03T17:12:47.538Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZTMzOWM2YzIzM2VhNzg2YmFlOWMiLCJpYXQiOjE3MDk0ODU3OTEsImV4cCI6MTcwOTQ5NjU5MX0.02-kXNvKoE8cpIXtlyN4DbPAD3raY4XbaPU82qyu4L0"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"The best fruit\",\n  \"mainText\":\"The best fruit for me, is the mango\",\n  \"category\":[\"Fruit\",\"Random\"]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b093e323-8d6e-4ae3-844a-ce8efce49a59",
+            "colId": "6257ad02-8cd3-47fe-9761-fbc73dbaddd6",
+            "containerId": "",
+            "name": "publicationGet",
+            "url": "http://localhost:3000/opinionsManager/v1/publications/",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-02T04:06:54.658Z",
+            "modified": "2024-03-04T05:30:35.501Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZTMyOGM2YzIzM2VhNzg2YmFlOTgiLCJpYXQiOjE3MDk1Mjg2MTcsImV4cCI6MTcwOTUzOTQxN30.sxapi8JWILLsAM4Vfm7lILK8sW4asBSA300syRtL0Ws"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "818f0c1f-fdbc-41f3-b181-b385c1959cf4",
+            "colId": "6257ad02-8cd3-47fe-9761-fbc73dbaddd6",
+            "containerId": "",
+            "name": "publicationDelete",
+            "url": "http://localhost:3000/opinionsManager/v1/publications/65e55637e52a0094f162b2b3",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-02T04:41:06.511Z",
+            "modified": "2024-03-04T05:24:56.544Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZTMyOGM2YzIzM2VhNzg2YmFlOTgiLCJpYXQiOjE3MDk1Mjg2MTcsImV4cCI6MTcwOTUzOTQxN30.sxapi8JWILLsAM4Vfm7lILK8sW4asBSA300syRtL0Ws"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "cae02d15-70bd-4224-9a1b-bf406b74d25c",
+            "colId": "6257ad02-8cd3-47fe-9761-fbc73dbaddd6",
+            "containerId": "",
+            "name": "publicationGetById",
+            "url": "http://localhost:3000/opinionsManager/v1/publications/65e55637e52a0094f162b2b3",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-04T01:47:56.888Z",
+            "modified": "2024-03-04T05:17:19.566Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZTMzOWM2YzIzM2VhNzg2YmFlOWMiLCJpYXQiOjE3MDk1MjYwNjcsImV4cCI6MTcwOTUzNjg2N30.Pex0MmFb5X4mUWCCpr9VpCVZBqPE7Duc8spsZH3Bh9o"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

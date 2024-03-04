@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "users",
-    "dateExported": "2024-03-01T16:46:49.583Z",
+    "dateExported": "2024-03-04T05:36:50.789Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-29T03:35:00.672Z",
-            "modified": "2024-03-01T16:46:25.435Z",
+            "modified": "2024-03-04T01:16:45.488Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"username\":\"dsanchez\",\n  \"userEmail\":\"dsanchez@gmail.com\",\n  \"password\":\"12345678\"\n}",
+                "raw": "{\n  \"username\":\"fcorado\",\n  \"userEmail\":\"fcorado@gmail.com\",\n  \"password\":\"12345678\"\n}",
                 "form": []
             },
             "tests": []
@@ -33,12 +33,12 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-03-01T01:21:09.695Z",
-            "modified": "2024-03-01T14:18:34.941Z",
+            "modified": "2024-03-04T05:09:29.743Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"user\":\"brodriguez\",\n  \"password\":\"12345678\"\n}",
+                "raw": "{\n  \"user\":\"scardenas\",\n  \"password\":\"12345678\"\n}",
                 "form": []
             },
             "tests": []
@@ -52,11 +52,11 @@
             "method": "PUT",
             "sortNum": 30000,
             "created": "2024-03-01T05:12:11.043Z",
-            "modified": "2024-03-01T16:42:10.965Z",
+            "modified": "2024-03-03T18:09:33.581Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZTMzOWM2YzIzM2VhNzg2YmFlOWMiLCJpYXQiOjE3MDkzMDI3MTQsImV4cCI6MTcwOTMxMzUxNH0.xqRuTUwiBOOH3tbSeONalyPyGcyH43TBKYy2QRroNUg"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZTMzOWM2YzIzM2VhNzg2YmFlOWMiLCJpYXQiOjE3MDk0ODU3OTEsImV4cCI6MTcwOTQ5NjU5MX0.02-kXNvKoE8cpIXtlyN4DbPAD3raY4XbaPU82qyu4L0"
                 }
             ],
             "params": [],

@@ -1,0 +1,95 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "comments",
+    "dateExported": "2024-03-04T05:36:43.270Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "12eb3185-4cf5-47eb-b5f7-65fb3afd89b2",
+            "colId": "f41682a0-df61-4bf9-af4a-95c779d491b8",
+            "containerId": "",
+            "name": "commentsGet",
+            "url": "http://localhost:3000/opinionsManager/v1/comments",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-03T03:43:19.064Z",
+            "modified": "2024-03-04T01:34:59.912Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZTMyOGM2YzIzM2VhNzg2YmFlOTgiLCJpYXQiOjE3MDk1MTUwNzIsImV4cCI6MTcwOTUyNTg3Mn0.679-N6gaxDXHZW3SHThYxVvOdUjONcHBQv5rdwBtiD8"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a0d477cf-2ce0-4e93-9d30-35a55785d968",
+            "colId": "f41682a0-df61-4bf9-af4a-95c779d491b8",
+            "containerId": "",
+            "name": "commentsPost",
+            "url": "http://localhost:3000/opinionsManager/v1/comments",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-03T03:49:01.547Z",
+            "modified": "2024-03-04T05:17:04.820Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZTMyOGM2YzIzM2VhNzg2YmFlOTgiLCJpYXQiOjE3MDk1Mjg2MTcsImV4cCI6MTcwOTUzOTQxN30.sxapi8JWILLsAM4Vfm7lILK8sW4asBSA300syRtL0Ws"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"comment\":\"Por algo es un juego competitivo\",\n  \"idPublication\":\"65e55637e52a0094f162b2b3\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ef248e29-3be0-43fe-9af5-6beb8a099cd7",
+            "colId": "f41682a0-df61-4bf9-af4a-95c779d491b8",
+            "containerId": "",
+            "name": "commentPut",
+            "url": "http://localhost:3000/opinionsManager/v1/comments/65e4be6223eb7e0499f0d1c0",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-03T19:36:13.115Z",
+            "modified": "2024-03-03T19:42:49.620Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZTMzOWM2YzIzM2VhNzg2YmFlOWMiLCJpYXQiOjE3MDk0ODU3OTEsImV4cCI6MTcwOTQ5NjU5MX0.02-kXNvKoE8cpIXtlyN4DbPAD3raY4XbaPU82qyu4L0"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"comment\":\"Oh! que bien\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2ba87efd-e74b-4acc-8005-028c99633a66",
+            "colId": "f41682a0-df61-4bf9-af4a-95c779d491b8",
+            "containerId": "",
+            "name": "commentDelete",
+            "url": "http://localhost:3000/opinionsManager/v1/comments/65e4d2df70500ab2cb25d32f",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-03T23:35:30.215Z",
+            "modified": "2024-03-04T00:40:30.524Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZTMzOWM2YzIzM2VhNzg2YmFlOWMiLCJpYXQiOjE3MDk1MDkwMjQsImV4cCI6MTcwOTUxOTgyNH0.3-ubvK553ZmBGwW0POsrvhko3peauFB2NL4EC-gZwP0"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
