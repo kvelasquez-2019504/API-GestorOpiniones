@@ -1,27 +1,29 @@
 import { request, response } from "express";
 import Publication from '../publications/publication.model.js';
+import Comment from '../comments/comment.model.js';
 import User from "../users/user.model.js";
 
-export const publicationGet= async(req,res)=>{
-    const {id}=req.user;
+export const publicationGet = async (req, res) => {
+    const { id } = req.user;
     const userLog = await User.findById(id);
-    let myPublications=[];
-    for(let idPublication of userLog.publications){
-        const publication = await Publication.findById(idPublication);
-        if(publication){
-            myPublications.push(publication);
-        }
+    let myPublications = [];
+    for (let idPublication of userLog.publications) {
+        const { title } = await Publication.findById(idPublication);
+        const [numberComments] = await Promise.all([
+            Comment.countDocuments({idPublication:idPublication})
+        ]);
+        myPublications.push({title,numberComments});
     }
     res.status(200).json({
         myPublications
     });
 }
 
-export const publicationDelete=async(req=request,res=response)=>{
-    const {idPublication}=req.params;
+export const publicationDelete = async (req = request, res = response) => {
+    const { idPublication } = req.params;
     const publication = await Publication.findById(idPublication);
     res.status(200).json({
-        msg:"Deleted publication",
+        msg: "Deleted publication",
         publication
     });
 
@@ -42,10 +44,10 @@ export const verifyIdPublication = async (req, res, next) => {
 export const publicationPut = async (req = request, res = response) => {
     const { idPublication } = req.params;
     const { _id, idUser, ...publication } = req.body;
-    await Publication.findByIdAndUpdate(idPublication,{...publication});
+    await Publication.findByIdAndUpdate(idPublication, { ...publication });
     const newPublication = await Publication.findById(idPublication);
     res.status(200).json({
-        msg:"The publication is now updated",
+        msg: "The publication is now updated",
         newPublication
     });
 }
