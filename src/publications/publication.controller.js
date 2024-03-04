@@ -8,11 +8,11 @@ export const publicationGet = async (req, res) => {
     const userLog = await User.findById(id);
     let myPublications = [];
     for (let idPublication of userLog.publications) {
-        const { title } = await Publication.findById(idPublication);
+        const { _id,title } = await Publication.findById(idPublication);
         const [numberComments] = await Promise.all([
             Comment.countDocuments({idPublication:idPublication})
         ]);
-        myPublications.push({title,numberComments});
+        myPublications.push({_id,title,numberComments});
     }
     res.status(200).json({
         myPublications
@@ -21,18 +21,51 @@ export const publicationGet = async (req, res) => {
 
 export const publicationGetById = async (req, res) => {
     const { idPublication } = req.params;
-    const publicationSearch = await Publication.findById(idPublication);
+    const {title,mainText,category} = await Publication.findById(idPublication);
+    let comments=[];
+    const [countComments,arrayComments] = await Promise.all([
+        Comment.countDocuments({idPublication:idPublication}),
+        Comment.find({idPublication:idPublication})
+    ]);
+
+    for(let comment of arrayComments){
+        const {username} = await User.findById(comment.idUser);
+        comments.push({username,comment:comment.comment});
+    }
+
     res.status(200).json({
-        publicationSearch
+        title,
+        mainText,
+        category,
+        countComments,
+        comments
     });
 }
 
 export const publicationDelete = async (req = request, res = response) => {
     const { idPublication } = req.params;
+    const {id} = req.user;
+    const userLog = await User.findById(id);
     const publication = await Publication.findById(idPublication);
+    const [arrayComments] = await Promise.all([
+        Comment.find({idPublication:idPublication})
+    ]);
+    let comments=[];
+    for(let comment of arrayComments){
+        const userSearch = await User.findById(comment.idUser);
+        let indexComment =userSearch.comments.indexOf(comment._id);
+        userSearch.comments.pop(indexComment);
+        await User.findByIdAndUpdate(userSearch._id,{comments:userSearch.comments});
+        await Comment.deleteOne({_id:comment._id});
+        comments.push({username:userSearch.username,comment:comment.comment});
+    }
+    userLog.publications.pop(userLog.publications.indexOf(idPublication));
+    await User.findByIdAndUpdate(id,{publications:userLog.publications});
+    await Publication.deleteOne({_id:idPublication});
     res.status(200).json({
         msg: "Deleted publication",
-        publication
+        publication,
+        comments
     });
 
 }

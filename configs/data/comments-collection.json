@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "65e558ea2e8d92c6b915b67e"
+  },
+  "comment": "Yo tambien odio eso JAJA",
+  "idUser": {
+    "$oid": "65e1e347c6c233ea786baea0"
+  },
+  "idPublication": {
+    "$oid": "65e55637e52a0094f162b2b3"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e559032e8d92c6b915b684"
+  },
+  "comment": "Por eso ya no juego y me fui para minecraft",
+  "idUser": {
+    "$oid": "65e1e347c6c233ea786baea0"
+  },
+  "idPublication": {
+    "$oid": "65e55637e52a0094f162b2b3"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e559222e8d92c6b915b68a"
+  },
+  "comment": "Lo que dijo el de arriba JAJA",
+  "idUser": {
+    "$oid": "65e1e339c6c233ea786bae9c"
+  },
+  "idPublication": {
+    "$oid": "65e55637e52a0094f162b2b3"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e5593c2e8d92c6b915b690"
+  },
+  "comment": "No seas lloron y aprende a jugar",
+  "idUser": {
+    "$oid": "65e1e328c6c233ea786bae98"
+  },
+  "idPublication": {
+    "$oid": "65e55637e52a0094f162b2b3"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e559502e8d92c6b915b696"
+  },
+  "comment": "Por algo es un juego competitivo",
+  "idUser": {
+    "$oid": "65e1e328c6c233ea786bae98"
+  },
+  "idPublication": {
+    "$oid": "65e55637e52a0094f162b2b3"
+  },
+  "__v": 0
+}]

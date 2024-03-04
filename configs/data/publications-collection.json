@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "65e55637e52a0094f162b2b3"
+  },
+  "title": "I hate Fornite",
+  "mainText": "You can no longer play fortnite without having them build you an entire house >:|",
+  "category": [
+    "Videogame",
+    "Hate",
+    "Fornite",
+    "NubPlayer"
+  ],
+  "idUser": {
+    "$oid": "65e1e328c6c233ea786bae98"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e5565de52a0094f162b2b8"
+  },
+  "title": "I hate Minecraft",
+  "mainText": "Exists cheater in the game",
+  "category": [
+    "Videogame",
+    "Hate",
+    "Minecraft"
+  ],
+  "idUser": {
+    "$oid": "65e1e328c6c233ea786bae98"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e556f9e52a0094f162b2be"
+  },
+  "title": "My favorite food",
+  "mainText": "Not exists in the real life",
+  "category": [
+    "Food",
+    "Random"
+  ],
+  "idUser": {
+    "$oid": "65e1e339c6c233ea786bae9c"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e55731e52a0094f162b2c3"
+  },
+  "title": "Python",
+  "mainText": "Start with my first print('Hello world')",
+  "category": [
+    "Programmer",
+    "Python",
+    "Developer"
+  ],
+  "idUser": {
+    "$oid": "65e1e339c6c233ea786bae9c"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e55841e52a0094f162b2c9"
+  },
+  "title": "Java",
+  "mainText": "Start with my first System.out.println(`Hello Worl`)",
+  "category": [
+    "Programming",
+    "Java"
+  ],
+  "idUser": {
+    "$oid": "65e1e347c6c233ea786baea0"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e55875e52a0094f162b2ce"
+  },
+  "title": "I like...",
+  "mainText": "Is your imagination",
+  "category": [
+    "Poetic",
+    "Random",
+    "Meme"
+  ],
+  "idUser": {
+    "$oid": "65e1e347c6c233ea786baea0"
+  },
+  "__v": 0
+}]

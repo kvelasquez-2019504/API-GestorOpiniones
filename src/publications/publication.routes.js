@@ -1,11 +1,12 @@
 import { Router } from "express";
 import { check } from "express-validator";
 import { publicationGet,
+    publicationGetById,
     publicationDelete,
     publicationPost,
     verifyIdPublication,
     publicationPut } from "./publication.controller.js";
-import {verifyLengthCategory}  from '../helpers/db-validator.js';
+import {existPublication, verifyLengthCategory}  from '../helpers/db-validator.js';
 import { validateFields } from "../middlewares/validate-field.js";
 import { validateJWT } from "../middlewares/validate-jwt.js";
 
@@ -13,7 +14,7 @@ const router= Router();
 
 router.get('/',[validateJWT],publicationGet);
 
-router.get('/:idPublication',[validateJWT,verifyIdPublication],publicationGet);
+router.get('/:idPublication',[validateJWT],publicationGetById);
 
 router.delete('/:idPublication',[validateJWT,verifyIdPublication],publicationDelete);
 

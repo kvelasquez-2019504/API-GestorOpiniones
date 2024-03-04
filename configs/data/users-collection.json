@@ -5,8 +5,13 @@
   "username": "kvelasquez",
   "userEmail": "kvelasquez@gmail.com",
   "password": "$2a$10$mHl7tU.WdrZPhhyPyFTEnu6axxguvScv9ZXl5FB8g3pEEclC07DRu",
-  "publications": [],
-  "comments": [],
+  "publications": [
+    "65e55637e52a0094f162b2b3"
+  ],
+  "comments": [
+    "65e5593c2e8d92c6b915b690",
+    "65e559502e8d92c6b915b696"
+  ],
   "__v": 0
 },
 {
@@ -16,8 +21,13 @@
   "username": "brodriguez",
   "userEmail": "brodriguez@gmail.com",
   "password": "$2a$10$YgWarCxClZTzEFDFa8oNH.R1Ycwo7Ig4aPCliNHqVnZuYPm5lQGAC",
-  "publications": [],
-  "comments": [],
+  "publications": [
+    "65e556f9e52a0094f162b2be",
+    "65e55731e52a0094f162b2c3"
+  ],
+  "comments": [
+    "65e559222e8d92c6b915b68a"
+  ],
   "__v": 0
 },
 {
@@ -27,7 +37,13 @@
   "username": "scardenas",
   "userEmail": "scardenas@gmail.com",
   "password": "$2a$10$S/Zeefujo2qztLT55QMJO.IBJa9T9itJG.gSjmZpCcNyBQfrqB1/a",
-  "publications": [],
-  "comments": [],
+  "publications": [
+    "65e55841e52a0094f162b2c9",
+    "65e55875e52a0094f162b2ce"
+  ],
+  "comments": [
+    "65e558ea2e8d92c6b915b67e",
+    "65e559032e8d92c6b915b684"
+  ],
   "__v": 0
 }]
