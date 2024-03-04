@@ -3,6 +3,7 @@ import { check } from "express-validator";
 import { validateJWT } from "../middlewares/validate-jwt.js";
 import { commentPost,
     commentPut,
+    commentDelete,
     commentsGet, 
     verifyComment} from "./comment.controller.js";
 
@@ -12,6 +13,12 @@ import { existPublication } from "../helpers/db-validator.js";
 const router = Router();
 
 router.get('/',[validateJWT],commentsGet);
+
+router.delete('/:idComment',[
+    validateJWT,
+    verifyComment,
+    validateFields
+],commentDelete);
 
 router.put('/:idComment',[
     validateJWT,

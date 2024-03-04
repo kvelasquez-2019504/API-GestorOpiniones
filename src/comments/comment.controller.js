@@ -38,6 +38,24 @@ export const commentPut = async(req=request,res=response)=>{
     });
 }
 
+export const commentDelete = async(req=request,res=response)=>{
+    const {id} = req.user;
+    const userLog = await User.findById(id);
+    const {idComment} = req.params;
+    let index=0;
+    if(userLog.comments.includes(idComment)){
+        index=userLog.comments.indexOf(idComment);
+    }
+    const comment = await Comment.findById(idComment);
+
+    //await Comment.deleteOne({_id:idComment});
+    res.status(200).json({
+        msg:"Your comment is deleted",
+        comment,
+        index
+    })
+}
+
 export const commentsGet = async (req=request, res=response)=>{
     const {id} =req.user;
     const userLog =await User.findById(id);
