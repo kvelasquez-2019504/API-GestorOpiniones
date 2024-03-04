@@ -48,11 +48,10 @@ export const commentDelete = async(req=request,res=response)=>{
     }
     const comment = await Comment.findById(idComment);
 
-    //await Comment.deleteOne({_id:idComment});
+    await Comment.deleteOne({_id:idComment});
     res.status(200).json({
         msg:"Your comment is deleted",
-        comment,
-        index
+        comment
     })
 }
 
